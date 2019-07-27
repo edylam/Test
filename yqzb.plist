@@ -21,14 +21,6 @@
                         <key>url</key>
                         <string>http://113.107.249.114:8088/img57.png</string>
                     </dict>
-                    <dict>
-                        <key>kind</key>
-                        <string>full-size-image</string>
-                        <key>needs-shine</key>
-                        <true/>
-                        <key>url</key>
-                        <string>http://113.107.249.114:8088/img512.png</string>
-                    </dict>
                 </array>
                 <key>metadata</key>
                 <dict>
@@ -39,7 +31,7 @@
                     <key>kind</key>
                     <string>software</string>
                     <key>title</key>
-                    <string>YQZB</string>
+                    <string>yqzb</string>
                 </dict>
             </dict>
         </array>

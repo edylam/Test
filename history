@@ -1,0 +1,466 @@
+1  cd /home/
+    2  cd www/purevm/
+    3  ls
+    4  vi index.html
+    5  vi manifest.plist
+    6  ls
+    7  mv yqjb.ipa yqzb.ipa
+    8  ls
+    9  vi manifest.plist
+   10  exit
+   11  ls
+   12  cat /etc/redhat-release
+   13  cd /home/
+   14  ls
+   15  yum install wget
+   16  yum install net-tools
+   17  ifocnfig
+   18  ifconfig
+   19  wget http://nginx.org/download/nginx-1.10.2.tar.gz
+   20  wget http://www.openssl.org/source/openssl-fips-2.0.10.tar.gz
+   21  wget http://zlib.net/zlib-1.2.11.tar.gz
+   22  wget https://ftp.pcre.org/pub/pcre/pcre-8.43.tar.gz
+   23  yum -y install gcc automake autoconf libtool make
+   24  yum install gcc-c++
+   25  ls
+   26  tar zxvf pcre-8.43.tar.gz
+   27  cd pcre-8.43
+   28  ./configure && make && make install
+   29  cd ..
+   30  tar zxvf openssl-fips-2.0.10.tar.gz
+   31  cd openssl-fips-2.0.10
+   32  ./config && make && make install
+   33  cd ..
+   34  ls
+   35  tar zxvf zlib-1.2.11.tar.gz
+   36  cd zlib-1.2.11
+   37  ./config && make && make install
+   38  ./configure && make && make install
+   39  cd ..
+   40  tar zxvf nginx-1.10.2.tar.gz
+   41  cd nginx-1.10.2
+   42  ./configure && make && make install
+   43  systemctl start nginx.service
+   44  cd /usr/local/nginx/
+   45  ls
+   46  cd sbin/
+   47  ls
+   48  ./nginx
+   49  netstat -ntl
+   50  curl http://localhost
+   51  vi /lib/systemd/system/nginx.service
+   52  systemctl enable nginx.service
+   53  systemctl restart nginx.service　
+   54  systemctl stop nginx.service　
+   55  systemctl start nginx.service　
+   56  systemctl daemon-reload
+   57  systemctl start nginx.service　
+   58  vi /usr/lib/systemd/system/nginx.service
+   59  systemctl start nginx.service　
+   60  systemctl daemon-reload
+   61  systemctl start nginx.service　
+   62  vi /usr/lib/systemd/system/nginx.service
+   63  vi /lib/systemd/system/nginx.service
+   64  vi /etc/init.d/nginx
+   65  chmod 755 /etc/init.d/nginx
+   66  chkconfig --add nginx
+   67  service nginx start
+   68  service nginx stop
+   69  vi /etc/init.d/nginx
+   70  vi /usr/lib/systemd/system/nginx.service
+   71  systemctl status nginx
+   72  systemctl status nginx -l
+   73  vi /usr/lib/systemd/system/nginx.service
+   74  systemctl status nginx
+   75  vi /usr/lib/systemd/system/nginx.service
+   76  chmod 755 /usr/lib/systemd/system/nginx.service
+   77  systemctl status nginx
+   78  systemctl daemon-reload
+   79  systemctl status nginx
+   80  systemctl status nginx -l
+   81  vi /usr/lib/systemd/system/nginx.service
+   82  find / -name nginx.pid
+   83  vi /usr/lib/systemd/system/nginx.service
+   84  systemctl status nginx -l
+   85  systemctl daemon-reload
+   86  systemctl status nginx -l
+   87  vi /usr/lib/systemd/system/nginx.service
+   88  netstat -ntl
+   89  ps -ef |grep nginx
+   90  kill 13582
+   91  netstat -ntl
+   92  systemctl status nginx -l
+   93  systemctl daemon-reload
+   94  systemctl status nginx -l
+   95  vi /usr/lib/systemd/system/nginx.service
+   96  systemctl daemon-reload
+   97  systemctl status nginx -l
+   98  systemctl status nginx
+   99  vi /usr/lib/systemd/system/nginx.service
+  100  systemctl start nginx
+  101  systemctl stop nginx
+  102  vi /lib/systemd/system/nginx.service
+  103  systemctl stop nginx
+  104  chmod 755 /etc/rc.d/rc.local
+  105  vi /etc/rc.d/rc.local
+  106  /usr/local/nginx/sbin/nginx
+  107  netstat -ntl
+  108  cd /home/
+  109  ls
+  110  wget https://dl.eff.org/certbot-auto
+  111  ls
+  112  chmod a+x ./certbot-auto
+  113  cd /usr/local/nginx/conf/
+  114  ls
+  115  vi nginx.conf
+  116  ls
+  117  vi nginx.conf
+  118  ls
+  119  cd ..
+  120  ls
+  121  cd html
+  122  ;s
+  123  ls
+  124  vi index.html
+  125  ls
+  126  cd ..
+  127  ls
+  128  cd html/
+  129  ls
+  130  mkdir /home/www
+  131  ls
+  132  cp index.html /home/www/
+  133  ls /home/wwww
+  134  ls
+  135  ls /home/www
+  136  ls -l /home/www/
+  137  cd ..
+  138  cd conf/
+  139  ls
+  140  vi nginx.conf
+  141  vi /home/www/index.html
+  142  vi nginx.conf
+  143  /usr/local/nginx/sbin/nginx -s stop
+  144  netstat -ntl
+  145  /usr/local/nginx/sbin/nginx stop
+  146  vi nginx.conf
+  147  /usr/local/nginx/sbin/nginx -s stop
+  148  netstat -ntl
+  149  /usr/local/nginx/sbin/nginx
+  150  vi nginx.conf
+  151  cd /home/www/
+  152  ls
+  153  mkdir testapp
+  154  mv index.html testapp/
+  155  ls
+  156  cd testapp/
+  157  ls
+  158  vi index.html
+  159  cd /home
+  160  ls
+  161  certbot-auto --nginx -d testapp.com -d www.testapp.com
+  162  ./certbot-auto --nginx -d testapp.com -d www.testapp.com
+  163  ./certbot-auto --/usr/local/nginx/sbin/nginx -d testapp.com -d www.testapp.com
+  164  ./certbot-auto --nginx -d testapp.com -d www.testapp.com
+  165  cd /usr/local/nginx/sbin/
+  166  ls
+  167  /home/certbot-auto --nginx -d testapp.com -d www.testapp.com
+  168  /home/certbot-auto --./nginx -d testapp.com -d www.testapp.com
+  169  /home/certbot-auto --nginx -d testapp.com -d www.testapp.com
+  170  service nginx stop
+  171  systemctl stop nginx.service
+  172  vi /usr/lib/systemd/system/nginx.service
+  173  chmod 754 /usr/lib/systemd/system/nginx.service
+  174  systemctl daemon-reload
+  175  systemctl stop nginx.service
+  176  netstat -ntl
+  177  systemctl stop nginx.service
+  178  netstat -ntl
+  179  vi /usr/lib/systemd/system/nginx.service
+  180  systemctl start nginx.service
+  181  systemctl reload nginx.service
+  182  systemctl restart nginx.service
+  183  vi /usr/lib/systemd/system/nginx.service
+  184  netstat -ntl
+  185  /usr/local/nginx/sbin/nginx -s stop
+  186  netstat -ntl
+  187  systemctl start nginx.service
+  188  netstat -ntl
+  189  systemctl stop nginx.service
+  190  netstat -ntl
+  191  service nginx start
+  192  netstat -ntl
+  193  vi /usr/local/nginx/conf/nginx.conf
+  194  mv /home/www/testapp/ /home/www/purevm
+  195  service nginx restart
+  196  cd /home/
+  197  history
+  198  ./certbot-auto --nginx -d purevm.com -d www.purevm.com
+  199  nginx
+  200  systemctl restart nginx
+  201  systemctl stop nginx
+  202  systemctl start nginx
+  203  ./certbot-auto --help all
+  204  ./certbot-auto --nginx --nginx-server-root /usr/local/nginx --nginx-ctl /usr/local/nginx/sbin/nginx -d purevm.com -d www.purevm.com
+  205  ln -s /usr/local/nginx/conf/nginx.conf /usr/local/nginx/nginx.conf
+  206  ./certbot-auto --nginx --nginx-server-root /usr/local/nginx --nginx-ctl /usr/local/nginx/sbin/nginx -d purevm.com -d www.purevm.com
+  207  ls /usr/local/nginx/
+  208  ls /usr/local/nginx/conf/
+  209  ln -s /usr/local/nginx/conf/mime.types /usr/local/nginx/mime.types
+  210  ./certbot-auto --nginx --nginx-server-root /usr/local/nginx --nginx-ctl /usr/local/nginx/sbin/nginx -d purevm.com -d www.purevm.com
+  211  ls
+  212  rm -rf nginx-1.10.2
+  213  tar zxvf nginx-1.10.2.tar.gz
+  214  cd nginx-1.10.2
+  215  ./configure --with-http_ssl_module
+  216  male
+  217  make
+  218  mv /usr/local/nginx/sbin/nginx /usr/local/nginx/sbin/nginx.old
+  219  ls
+  220  cd objs/
+  221  ls
+  222  cp nginx /usr/local/nginx/sbin/
+  223  cd ..
+  224  make upgrade
+  225  cd /usr/local/nginx/
+  226  ls
+  227  cd /home
+  228  ls
+  229  ./certbot-auto --nginx --nginx-server-root /usr/local/nginx --nginx-ctl /usr/local/nginx/sbin/nginx -d purevm.com -d www.purevm.com
+  230  find / -name nginx.pid
+  231  netstat -ntl
+  232  nslookup www.purevm.com
+  233  yum install nslookup
+  234  yum install bind-utils
+  235  nslookup www.purevm.com
+  236  ./certbot-auto --nginx --nginx-server-root /usr/local/nginx --nginx-ctl /usr/local/nginx/sbin/nginx -d purevm.com -d www.purevm.com
+  237  vi /usr/local/nginx/nginx.conf
+  238  systemctl restart nginx
+  239  systemctl stop nginx
+  240  netstat -ntl
+  241  systemctl stop nginx.service
+  242  netstat -ntl
+  243  service nginx stop
+  244  netstat -ntl
+  245  service nginx stop
+  246  service nginx restart
+  247  service nginx reload
+  248  netstat -ntl
+  249  vi /usr/local/nginx/nginx.conf
+  250  history
+  251  /usr/local/nginx/sbin/nginx -s stop
+  252  netstat -ntl
+  253  /usr/local/nginx/sbin/nginx
+  254  netstat -ntl
+  255  service nginx stop
+  256  netstat -ntl
+  257  systemctl stop nginx.service
+  258  netstat -ntl
+  259  systemctl stop nginx.service
+  260  netstat -ntl
+  261  vi /usr/lib/systemd/system/nginx.service
+  262  history
+  263  systemctl daemon-reload
+  264  systemctl stop nginx.service
+  265  netstat -ntl
+  266  systemctl restart nginx
+  267  vi /usr/local/nginx/nginx.conf
+  268  systemctl restart nginx
+  269  systemctl stop nginx
+  270  systemctl start nginx
+  271  netstat -ntl
+  272  /usr/local/nginx/sbin/nginx -s stop
+  273  systemctl start nginx
+  274  netstat -ntl
+  275  systemctl restart nginx
+  276  vi /usr/local/nginx/nginx.conf
+  277  vi /usr/local/nginx/conf/nginx.conf
+  278  systemctl restart nginx
+  279  ls
+  280  cd www/purevm/
+  281  ls
+  282  vi index.html
+  283  cd /home/
+  284  ls
+  285  wget https://mail.qq.com/cgi-bin/ftnDownload302?sid=Ej-QpwwK1051DiR5&fid=2/1cb02e39-e089-46ef-a4f7-dba7c623a72d&code=c4ec0e1c&k=2f34656388ada09379134b481665034c525707530200025a4e51555b09480555065248020403064e07560454535303500203570730723154520c0b5204576eb18ffcc1b581d7943c2e624b0a4004315e
+  286  ls
+  287  rm -rf ftnDownload302\?sid\=Ej-QpwwK1051DiR5
+  288  ls
+  289  cd www/purevm/
+  290  ls
+  291  vi manifest.plist
+  292  ls
+  293  cd /home
+  294  ls
+  295  cd centos
+  296  ls
+  297  mv yqjb.ipa /home/www/purevm/
+  298  cd /home/www/purevm/
+  299  ls
+  300  vi index.html
+  301  ls
+  302  vi manifest.plist
+  303  ls
+  304  mv /home/centos/512x512.png ./
+  305  mv /home/centos/57x57.png ./
+  306  ls
+  307  vi manifest.plist
+  308  ls
+  309  cd /home/www/purevm/
+  310  ls
+  311  vi manifest.plist
+  312  vi index.html
+  313  cd /usr/local/nginx/conf/nginx.conf
+  314  vi /usr/local/nginx/conf/nginx.conf
+  315  ls
+  316  cd  /usr/local/nginx/conf
+  317  cd /usr/local/nginx/conf/
+  318  ls
+  319  vi mime.types
+  320  service restart nginx
+  321  service nginx restart
+  322  service nginx stop
+  323  netstat -ntl
+  324  service nginx start
+  325  netstat -ntl
+  326  vi mime.types
+  327  service nginx stop
+  328  service nginx start
+  329  cd /home/www/purevm/
+  330  ls
+  331  vi index.html
+  332  vi manifest.plist
+  333  vi /usr/local/nginx/mime.types
+  334  vi /usr/local/nginx/nginx.conf
+  335  vi index.html
+  336  cd /usr/local/nginx/conf/
+  337  vi nginx.conf
+  338  exit
+  339  cd /home/www/purevm/
+  340  ls
+  341  vi index2.html
+  342  vi index.html
+  343  vi manifest.plist
+  344  ls
+  345  vi index2.html
+  346  vi index.html
+  347  vi manifest.plist
+  348  vi index2.html
+  349  vi manifest.plist
+  350  ls
+  351  vi index.html
+  352  vi /usr/local/nginx/nginx.conf
+  353  vi /usr/local/nginx/mime.types
+  354  service nginx stop
+  355  netstat -ntl
+  356  service nginx start
+  357  netstat -ntl
+  358  exit
+  359  ls
+  360  cd /home/www/
+  361  cd purevm/
+  362  ls
+  363  vi manifest.plist
+  364  vi index.html
+  365  vi index2.html
+  366  vi index.html
+  367  vi index2.html
+  368  vi index.html
+  369  vi index2.html
+  370  cd /home/www/purevm/
+  371  ls
+  372  vi index2.html
+  373  vi index.html
+  374  vi index3
+  375  cp yqzb.plist yqzbnew.plist
+  376  vi index3
+  377  mv index3 index3.html
+  378  vi yqzbnew.plist
+  379  cp yqzb.ipa yqzbnew.ipa
+  380  ls
+  381  vi yqzbnew.plist
+  382  vi index2.html
+  383  exit
+  384  cd /home/www/root
+  385  cd /home/www/purevm
+  386  ls
+  387  vi index3.html
+  388  vi yqzb.plist
+  389  ls -a
+  390  rm -rf .yqzb.plist.swp
+  391  vi yqzb.plist
+  392  vi yqzbnew.plist
+  393  vi yqzb.plist
+  394  vi yqzbnew.plist
+  395  exit
+  396  vi /home/www/purevm/yqzbnew.plist
+  397  exit
+  398  ls
+  399  cd /home/www/purevm/
+  400  ls
+  401  vi index.html
+  402  ls
+  403  mv manifest.plist yqzb.plist
+  404  ls
+  405  vi yqzb.plist
+  406  vi index.html
+  407  vi yqzb.plist
+  408  vi /usr/local/nginx/nginx.conf
+  409  ls
+  410  vi yqzb.plist
+  411  ls
+  412  mv 57x57.png img57.png
+  413  mv 512x512.png img512.png
+  414  vi index2.html
+  415  vi yqzb.plist
+  416  netstat -ntl
+  417  cd /home
+  418  ls
+  419  cd www
+  420  ls
+  421  cd purevm
+  422  ls
+  423  cd /home/www/purevm/
+  424  ls
+  425  vi yqzbnew.plist
+  426  vi index3.html
+  427   vi yqzb.plist
+  428  vi yqzbnew.plist
+  429   vi yqzb.plist
+  430  vi yqzbnew.plist
+  431  exit
+  432  ls
+  433  cd /home/www/purevm/
+  434  ls
+  435  vi yqzb.plist
+  436  vi yqzbnew.plist
+  437  rm -rf yqzbnew.ipa
+  438  ls
+  439  vi yqzbnew.plist
+  440  exit
+  441  netstat -ntl
+  442  ls
+  443  service nginx stop
+  444  ls
+  445  netstat -ntl
+  446  service nginx start
+  447  netstat -ntl
+  448  exit
+  449  yum install iftop
+  450  iftop
+  451  yum -y install ncurses
+  452  yum -y install iptraf
+  453  ifconfig
+  454  iptraf -d eth0
+  455  iptraf
+  456  iptraf-ng -d eth0
+  457  yum install -y flex byacc libpcap ncurses-devel libpcap-devel
+  458  wget http://www.ex-parrot.com/pdw/iftop/download/iftop-1.0pre4.tar.gz
+  459  ls
+  460  tar zxvf iftop-1.0pre4.tar.gz
+  461  ls
+  462  cd iftop-1.0pre4
+  463  ./configure
+  464  make && make install
+  465  iftop -i eth0
+  466  exit
